@@ -24,7 +24,18 @@ const listTracksRandomly = function(list) {
     
 }
 
-console.log(listTracksRandomly(list(10)))
+const listTracksLooped = function(list, times) {
+    let loopedList = []
+
+    for(let i = 0; i < times; i++) {
+        loopedList = loopedList.concat(list)
+    }
+
+    return loopedList;
+}
+
+console.log(listTracksRandomly(list(1000)))
+console.log(listTracksLooped(list(10), 10))
 
 
 
